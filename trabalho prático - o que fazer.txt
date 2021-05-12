@@ -1,0 +1,32 @@
+utilizador:
+	username (único);
+	nome;
+	password;
+	tipo (administrador, acionista).
+
+ata:
+	numero (sequencial);
+	data assembleia;
+	local assembleia;
+	texto ata;
+	lista acionistas presentes (ordem de chegada);
+	estado (em redação, para assinatura, concluída).
+
+sistema:
+	inserir dados;
+	apagar dados;
+	pesquisar (CRUD) dados.
+tudo por administradores;
+	listar atas por estado;
+	listar as assinatura em falta de uma determinada ata;
+	listar todas as atas de assembleias que tenham ocorrido depois de uma determinada data;
+	listar todas as atas, ordenadas primeiro por estado, e depois por data;
+	pesquisar propostas as atas por local da assembleia a que diz respeito;
+	escrever num ficheiro de texto a ata com todos os seus dados, incluindo espaço para as assinaturas dos acionistas presentes;
+	gerar a listagem de atas ordenadas por quantidade de assinaturas em falta.
+
+uma ata no estado "para assinatura" ou "concluída" não pode ser alterada nem apagada.
+uma ata no estado "para assinatura" só pode ser assinada pelos utilizadores do tipo "acionista" presentes na assembleia, ordem inversa da ordem de chegada, quando todos os "acionistas" tiverem assinado, a ata fica no estado "concluída"
+
+para assinar, utilizador faz login e depois vê as atas que precisa de assinar
+aplicacao deve guardar o estado de execução
