@@ -5,14 +5,14 @@
 
 #define MAX 1000
 
-#include "login.h"
+#include <login.h>
 
-typedef struct adm{
+typedef struct utilizador{
 	char nome[100];
 	char senha[100];
-	char utilizador[100];
+	char username[100];
 	char tipo[2];
-	int numero;
+	int id_utilizador;
 }LOGIN;
 
 typedef struct elem{
@@ -101,7 +101,7 @@ FILE utilizador() {
 				gets(aceder.tipo);
 				
 				while(strcmp(aceder.tipo, "D") && strcmp(aceder.tipo, "C")) {
-					printf("\nIntroduziu carácter inválido\n");
+					printf("\nIntroduziu carï¿½cter invï¿½lido\n");
 					printf("\nIntroduza entre estes tipos de utilizador: D - administrador  \t C - acionista\n");
 					printf("\nTipo: ", aceder.tipo);
 				}
@@ -124,8 +124,8 @@ FILE utilizador() {
 						entrar=1;
 					}
 				}
-				if(entrar==1){ // CASO EXISTA O DADO INSERIDO IGUAL A UM DADO JÁ EXISTENTE NO FICHEIRO DE TEXTO, RETORNA VALOR 1
-					printf("Nome de utilizador já existente-> Escolha outro!!!");
+				if(entrar==1){ // CASO EXISTA O DADO INSERIDO IGUAL A UM DADO Jï¿½ EXISTENTE NO FICHEIRO DE TEXTO, RETORNA VALOR 1
+					printf("Nome de utilizador jï¿½ existente-> Escolha outro!!!");
 				}//  
 				else{
 					fp = fopen("adms_users->txt","r");
