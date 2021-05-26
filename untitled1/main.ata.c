@@ -5,7 +5,6 @@
 #include<stdlib.h>
 #include <string.h>
 
-<<<<<<< HEAD
     typedef struct ata {
         int numero;
         char data_assembleia[10];
@@ -45,17 +44,15 @@ typedef struct elem{
 
 // cria a instancia do ficheiro
 FILE *localAta1() {
->>>>>>> ce8a13d3e2cf150f320642070d9aa8790e544f86
 
         ATA ata;
 
-<<<<<<< HEAD
         printf("\n\nData: ");
         gets(ata.data_assembleia);
         fflush(stdin);
         printf("\nLocal da assembleia: ");
         gets(ata.local_assembleia);
-=======
+
     printf("\n\nDia da assembleia: ");
     gets(ata.dia_assembleia);
     printf("\n\nMês da assembleia: ");
@@ -65,11 +62,9 @@ FILE *localAta1() {
     fflush(stdin);
     printf("\nLocal da assembleia: ");
     gets(ata.local_assembleia);
->>>>>>> ce8a13d3e2cf150f320642070d9aa8790e544f86
 
         FILE *fl;
 
-<<<<<<< HEAD
         fl=fopen("ataDaAssembleia.txt", "a+");
 
         if(fl==NULL) {
@@ -96,7 +91,6 @@ FILE *localAta1() {
 }
 
 FILE *escreverAta1() {
->>>>>>> ce8a13d3e2cf150f320642070d9aa8790e544f86
 
         char texto[100];
         ATA ata;
@@ -130,6 +124,12 @@ void imprimeLista(ELEM *iniLista)
     }
 }
 */
+        void menu() {
+            printf("menu");
+            printf("\n\n1 - Inserir local");
+            printf("\n2 - Inserir texto");
+            printf("\n3 - listar local");
+        }
 
     void mostrarLista(ELEM *iniLista)
     {
@@ -171,12 +171,32 @@ void imprimeLista(ELEM *iniLista)
         return 0;
     }
 
-    int main(int argc, const char *argv[]){
+        int main(int argc, const char *argv[]){
 
-        ATA*iniLista = NULL;
-        iniLista=localAta1();
-    mostrarLista(iniLista);
+            ELEM * iniLista = NULL;
+            int menu_escolha;
+            int op;
+            menu();
+            menu_escolha:
+            printf("\nEscolha uma opção: ");
+            scanf("%d", &op);
+            fflush(stdin);
 
-    return 0;
-}
+
+            switch(op) {
+                case 1:
+                    localAta1();
+                    goto menu_escolha;
+                    break;
+                case 2:
+                    escreverAta1();
+                    goto menu_escolha;
+                    break;
+                case 3:
+                    iniLista = localAta1();
+                    mostrarLista(iniLista);
+                    goto menu_escolha;
+            }
+            return 0;
+        }
 
