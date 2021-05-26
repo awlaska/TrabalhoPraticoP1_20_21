@@ -1,4 +1,4 @@
-ToolSet: 3.1.7 (local)@D:\CLion
+ToolSet: 16.0 (local)@C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools
 Options: 
 
 Options:
