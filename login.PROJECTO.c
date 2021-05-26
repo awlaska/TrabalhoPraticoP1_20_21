@@ -6,6 +6,8 @@
 
 #define MAX 1000
 
+
+// struct do utiizador
 typedef struct utilizador{
 	char nome[100];
 	char senha[100];
@@ -14,6 +16,8 @@ typedef struct utilizador{
 	int id_utilizador;
 }LOGIN;
 
+
+// struct elem
 typedef struct elem{
     LOGIN info;
     struct elem *seguinte;
@@ -35,15 +39,13 @@ FILE utilizadores() {
 			
 	printf(" 1 - entrar \n 2- registar");
 	printf("\nQual tipo: ");
-	scanf("%d", &op);
+	scanf("%i", &op);
 	fflush(stdin);
 	menu_entrada:
 
 			
 	switch(op){
-			
 		case 1: {
-					
 			int login_sucesso;
 			
 			printf("\nNome de utilizador: ");

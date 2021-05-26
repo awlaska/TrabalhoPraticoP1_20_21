@@ -1,10 +1,11 @@
 // fazer tudo em uma só função
-// fazer as funções de listagem em um ficheiro a parte
+// fazer as funções de listagem num ficheiro a parte
 
 #include<stdio.h>
 #include<stdlib.h>
 #include <string.h>
 
+<<<<<<< HEAD
     typedef struct ata {
         int numero;
         char data_assembleia[10];
@@ -21,17 +22,54 @@
 
 
     FILE *localAta1() {
+=======
+
+// struct da ata
+typedef struct ata {
+    int numero;
+    int dia_assembleia[2];
+    int mes_assembleia[2];
+    int ano_assembleia[4];
+    char local_assembleia[50];
+    int lista_acionistas[][];
+    char estado;
+    char texto[1000];
+}ATA;
+
+
+// struct
+typedef struct elem{
+    ATA info;
+    struct elem *seguinte;
+} ELEM;
+
+// cria a instancia do ficheiro
+FILE *localAta1() {
+>>>>>>> ce8a13d3e2cf150f320642070d9aa8790e544f86
 
         ATA ata;
 
+<<<<<<< HEAD
         printf("\n\nData: ");
         gets(ata.data_assembleia);
         fflush(stdin);
         printf("\nLocal da assembleia: ");
         gets(ata.local_assembleia);
+=======
+    printf("\n\nDia da assembleia: ");
+    gets(ata.dia_assembleia);
+    printf("\n\nMês da assembleia: ");
+    gets(ata.mes_assembleia);
+    printf("\n\nAno da assembleia: ");
+    gets(ata.ano_assembleia);
+    fflush(stdin);
+    printf("\nLocal da assembleia: ");
+    gets(ata.local_assembleia);
+>>>>>>> ce8a13d3e2cf150f320642070d9aa8790e544f86
 
         FILE *fl;
 
+<<<<<<< HEAD
         fl=fopen("ataDaAssembleia.txt", "a+");
 
         if(fl==NULL) {
@@ -44,6 +82,21 @@
     }
 
     FILE *escreverAta1() {
+=======
+    // abre ficheiro
+    fl=fopen("ataDaAssembleia.txt", "a+");
+
+    if(fl==NULL) {
+        printf("\nERRO AO ABRIR ATA");
+    }
+    else {
+        fprintf(fl, "%i;%i;%i;%s", *ata.dia_assembleia, *ata.mes_assembleia, *ata.ano_assembleia, ata.local_assembleia);
+    }
+    fclose(fl);
+}
+
+FILE *escreverAta1() {
+>>>>>>> ce8a13d3e2cf150f320642070d9aa8790e544f86
 
         char texto[100];
         ATA ata;
