@@ -1,25 +1,29 @@
 // fazer tudo em uma só função
-// fazer as funções de listagem em um ficheiro a parte
+// fazer as funções de listagem num ficheiro a parte
 
 
 #include<stdio.h>
 #include<stdlib.h>
 
+
+// struct da ata
 typedef struct ata {
     int numero;
     char data_assembleia[10];
     char local_assembleia[50];
     int lista_acionistas[][];
     char estado;
-    chacr texto[1000];
+    char texto[1000];
 }ATA;
 
+
+// struct
 typedef struct elem{
     ATA info;
     struct elem *seguinte;
 } ELEM;
 
-
+// cria a instancia do ficheiro
 FILE *localAta1() {
 
     ATA ata;
@@ -32,7 +36,8 @@ FILE *localAta1() {
 
     FILE *fl;
 
-    fl=fopen("ataDaAssembleia.txt", "w");
+    // abre ficheiro
+    fl=fopen("ataDaAssembleia.txt", "a+");
 
     if(fl==NULL) {
         printf("\nERRO AO ABRIR ATA");
@@ -40,9 +45,7 @@ FILE *localAta1() {
     else {
         fprintf(fl, "Data: %s \tLocal: %s", ata.data_assembleia, ata.local_assembleia);
     }
-
     fclose(fl);
-
 }
 
 FILE *escreverAta1() {
