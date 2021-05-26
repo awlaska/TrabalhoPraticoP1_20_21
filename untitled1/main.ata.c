@@ -9,7 +9,9 @@
 // struct da ata
 typedef struct ata {
     int numero;
-    char data_assembleia[10];
+    int dia_assembleia[2];
+    int mes_assembleia[2];
+    int ano_assembleia[4];
     char local_assembleia[50];
     int lista_acionistas[][];
     char estado;
@@ -28,8 +30,12 @@ FILE *localAta1() {
 
     ATA ata;
 
-    printf("\n\nData: ");
-    gets(ata.data_assembleia);
+    printf("\n\nDia da assembleia: ");
+    gets(ata.dia_assembleia);
+    printf("\n\nMês da assembleia: ");
+    gets(ata.mes_assembleia);
+    printf("\n\nAno da assembleia: ");
+    gets(ata.ano_assembleia);
     fflush(stdin);
     printf("\nLocal da assembleia: ");
     gets(ata.local_assembleia);
@@ -43,7 +49,7 @@ FILE *localAta1() {
         printf("\nERRO AO ABRIR ATA");
     }
     else {
-        fprintf(fl, "Data: %s \tLocal: %s", ata.data_assembleia, ata.local_assembleia);
+        fprintf(fl, "%i;%i;%i;%s", *ata.dia_assembleia, *ata.mes_assembleia, *ata.ano_assembleia, ata.local_assembleia);
     }
     fclose(fl);
 }
