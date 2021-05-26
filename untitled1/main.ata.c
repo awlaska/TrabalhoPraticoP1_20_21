@@ -5,10 +5,13 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-typedef struct {
-    char local[100];
-    char data[10];
-    char texto[100];
+typedef struct ata {
+    int numero;
+    char data_assembleia[10];
+    char local_assembleia[50];
+    int lista_acionistas[][];
+    char estado;
+    chacr texto[1000];
 }ATA;
 
 typedef struct elem{
@@ -22,10 +25,10 @@ FILE *localAta1() {
     ATA ata;
 
     printf("\n\nData: ");
-    gets(ata.data);
+    gets(ata.data_assembleia);
     fflush(stdin);
     printf("\nLocal da assembleia: ");
-    gets(ata.local);
+    gets(ata.local_assembleia);
 
     FILE *fl;
 
@@ -35,7 +38,7 @@ FILE *localAta1() {
         printf("\nERRO AO ABRIR ATA");
     }
     else {
-        fprintf(fl, "Data: %s \nLocal: %s", ata.data, ata.local);
+        fprintf(fl, "Data: %s \tLocal: %s", ata.data_assembleia, ata.local_assembleia);
     }
 
     fclose(fl);
@@ -49,7 +52,7 @@ FILE *escreverAta1() {
     ATA ata;
     FILE *fl;
 
-    fl=fopen("ataDaAssembleia.txt", "a");
+    fl=fopen("%i.txt", numero, "a");
 
     if(fl==NULL) {
         printf("\nERRO AO ABRIR ATA");
@@ -58,7 +61,7 @@ FILE *escreverAta1() {
     printf("\n\nIntroduza o texto da ata: ");
     scanf("%s", &ata.texto);
 
-    fprintf(fl, "\n\ntexto: %s", ata.texto);
+    fprintf(fl, "%s", ata.texto);
     fflush(stdin);
     fclose(fl);
 

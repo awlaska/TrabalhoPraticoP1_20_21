@@ -6,7 +6,9 @@
 
 int main(int argc, char *argv[]) {
 		
-		utilizador();
+		utilizadores();
+
+
 	
 	return 0;
 }

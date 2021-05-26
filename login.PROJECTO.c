@@ -2,10 +2,9 @@
 #include<stdlib.h>
 #include<string.h>
 #include<locale.h>
+#include <login.h>
 
 #define MAX 1000
-
-#include <login.h>
 
 typedef struct utilizador{
 	char nome[100];
@@ -22,7 +21,7 @@ typedef struct elem{
 
 
 
-FILE utilizador() {
+FILE utilizadores() {
 	
 	int menu_entrada;
 	int i=0, op=0;
@@ -48,7 +47,7 @@ FILE utilizador() {
 			int login_sucesso;
 			
 			printf("\nNome de utilizador: ");
-			gets(aceder.utilizador);
+			gets(aceder.username);
 			printf("\nSenha: ");
 			gets(aceder.senha);
 			

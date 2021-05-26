@@ -1,3 +1,3 @@
 #include "stdio.h"
 
-FILE utilizador();
+FILE utilizadores();
