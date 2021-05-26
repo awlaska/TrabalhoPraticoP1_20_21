@@ -5,6 +5,7 @@
 #include<stdlib.h>
 #include <string.h>
 
+<<<<<<< HEAD
     typedef struct ata {
         int numero;
         char data_assembleia[10];
@@ -23,6 +24,8 @@
     FILE *localAta1() {
 =======
 
+=======
+>>>>>>> 92caf02d6a067a5de8560276965c0ed531c74368
 // struct da ata
 typedef struct ata {
     int numero;
@@ -42,9 +45,12 @@ typedef struct elem{
     struct elem *seguinte;
 } ELEM;
 
-// cria a instancia do ficheiro
+// cria a instancia do ficheiro ataDaAssembleia
 FILE *localAta1() {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 92caf02d6a067a5de8560276965c0ed531c74368
         ATA ata;
 
         printf("\n\nData: ");
@@ -53,6 +59,7 @@ FILE *localAta1() {
         printf("\nLocal da assembleia: ");
         gets(ata.local_assembleia);
 
+<<<<<<< HEAD
     printf("\n\nDia da assembleia: ");
     gets(ata.dia_assembleia);
     printf("\n\nMês da assembleia: ");
@@ -65,32 +72,39 @@ FILE *localAta1() {
 
         FILE *fl;
 
+=======
+        printf("\n\nDia da assembleia: ");
+        gets(ata.dia_assembleia);
+        printf("\n\nMês da assembleia: ");
+        gets(ata.mes_assembleia);
+        printf("\n\nAno da assembleia: ");
+        gets(ata.ano_assembleia);
+        fflush(stdin);
+        printf("\nLocal da assembleia: ");
+        gets(ata.local_assembleia);
+
+
+        FILE *fl;
+
+
+>>>>>>> 92caf02d6a067a5de8560276965c0ed531c74368
         fl=fopen("ataDaAssembleia.txt", "a+");
 
         if(fl==NULL) {
             printf("\nERRO AO ABRIR ATA");
         }
         else {
-            fprintf(fl, "Data: %s \tLocal: %s", ata.data_assembleia, ata.local_assembleia);
+            fprintf(fl, "%i;%i;%i;%s", *ata.dia_assembleia, *ata.mes_assembleia, *ata.ano_assembleia, ata.local_assembleia);
         }
         fclose(fl);
     }
 
-    FILE *escreverAta1() {
-=======
-    // abre ficheiro
-    fl=fopen("ataDaAssembleia.txt", "a+");
-
-    if(fl==NULL) {
-        printf("\nERRO AO ABRIR ATA");
-    }
-    else {
-        fprintf(fl, "%i;%i;%i;%s", *ata.dia_assembleia, *ata.mes_assembleia, *ata.ano_assembleia, ata.local_assembleia);
-    }
-    fclose(fl);
-}
-
+    // cria a instancia do ficheiro %i.txt
 FILE *escreverAta1() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 92caf02d6a067a5de8560276965c0ed531c74368
 
         char texto[100];
         ATA ata;
