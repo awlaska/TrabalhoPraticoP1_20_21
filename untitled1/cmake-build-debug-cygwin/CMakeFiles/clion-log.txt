@@ -1,0 +1,10 @@
+C:\Users\cicero\AppData\Local\JetBrains\CLion2020.3\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/cygdrive/d/2ºSEMESTRE/PROG1/Trabalho prático/PROJECTO/C-lion-projectos/untitled1"
+CMake Error: The source directory "/cygdrive/d/2ÂºSEMESTRE/PROG1/Trabalho prÃ¡tico/PROJECTO/C-lion-projectos/untitled1/cmake-build-debug-cygwin/"/cygdrive/d/2ÂºSEMESTRE/PROG1/Trabalho prÃ¡tico/PROJECTO/C-lion-projectos/untitled1"" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+
+CMake Error:
+  ------------------------------------------------------------------------------------
+  Selected CMake might be incompatible with the Cygwin environment.
+  In order to run on Cygwin, CMake needs to be specially compiled.
+  Please select either CMake bundled with CLion or CMake from the Cygwin installation.
+  ------------------------------------------------------------------------------------
