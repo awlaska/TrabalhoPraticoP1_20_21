@@ -102,7 +102,7 @@ FILE utilizadores() {
 				scanf_s("%s", aceder.tipo);
 				
 				while(strcmp(aceder.tipo, "D") && strcmp(aceder.tipo, "C")) {
-					printf("\nIntroduziu caracter invalido\n");
+					printf("\nIntroduziu um caracter invalido\n");
 					printf("\nIntroduza entre estes tipos de utilizador: D - administrador  \t C - acionista\n");
 					printf("\nTipo: %s", aceder.tipo);
 				}
@@ -125,8 +125,8 @@ FILE utilizadores() {
 						entrar=1;
 					}
 				}
-				if(entrar==1){ // CASO EXISTA O DADO INSERIDO IGUAL A UM DADO J� EXISTENTE NO FICHEIRO DE TEXTO, RETORNA VALOR 1
-					printf("Nome de utilizador j� existente-> Escolha outro!!!");
+				if(entrar==1){ // CASO EXISTA O DADO INSERIDO IGUAL A UM DADO JA EXISTENTE NO FICHEIRO DE TEXTO, RETORNA VALOR 1
+					printf("Nome de utilizador ja existente-> Escolha outro!!!");
 				}//  
 				else{
 					fp = fopen_s("adms_users->txt","r");
