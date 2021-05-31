@@ -1,4 +1,4 @@
-// fazer tudo em uma só função
+// fazer tudo numa só função
 // fazer as funções de listagem num ficheiro a parte
 
 #include<stdio.h>
@@ -33,13 +33,13 @@ typedef struct ata {
     int mes_assembleia[2];
     int ano_assembleia[4];
     char local_assembleia[50];
-    int lista_acionistas[][];
+    int lista_acionistas[];
     char estado;
     char texto[1000];
 }ATA;
 
 
-// struct
+// struct para fazer lista ligada a apontar para o seguinte
 typedef struct elem{
     ATA info;
     struct elem *seguinte;
