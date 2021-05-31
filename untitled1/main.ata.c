@@ -14,7 +14,7 @@ typedef struct ata {
     char local_assembleia[50];
     int lista_acionistas[];
     char estado;
-    char texto[1000];
+    char* texto;
 }ATA;
 
 
@@ -65,7 +65,7 @@ FILE *escreverAta1() {
         printf("\nERRO AO ABRIR ATA");
     }
     printf("\n\nIntroduza o texto da ata: ");
-    scanf("%s", &ata.texto);
+    scanf("%s", ata.texto);
 
     fprintf(fl, "%s", ata.texto);
     fflush(stdin);
@@ -90,7 +90,6 @@ void imprimeLista(ELEM *iniLista)
 */
 
 // imprimir a lista
-void mostrarLista(ELEM *iniLista){
     ELEM * aux = NULL;
 
     if(iniLista=NULL) {
