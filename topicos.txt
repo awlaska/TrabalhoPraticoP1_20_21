@@ -1,0 +1,26 @@
+criar struct utilizador
+
+---
+
+criar struct ata
+
+---
+
+criar login e registar
+	inserir dados num ficheiro
+
+---
+
+criar __ para inserir dados
+
+---
+
+criar __ para apagar dados
+
+---
+
+criar CRUD para pesquisar
+
+---
+
+listar 
