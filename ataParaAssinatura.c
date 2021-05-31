@@ -1,16 +1,18 @@
 #include<stdio.h>
 
+// struct ata
 typedef struct {
 	char local[100];
 	char data[10];
 }ATA;
 
+// struct para fazer lista ligada a apontar para o seguinte
 typedef struct elem{
     ATA info;
     struct elem *seguinte;
 } ELEM;
 
-
+// cria a instancia do ficheiro ataDaAssembleia
 FILE localAta1() {
 	
 	ATA ata;

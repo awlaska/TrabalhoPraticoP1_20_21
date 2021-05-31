@@ -26,59 +26,52 @@ typedef struct elem{
 
 // cria a instancia do ficheiro ataDaAssembleia
 FILE *localAta1() {
-        ATA ata;
+    ATA ata;
 
-        printf("\n\nData: ");
-        gets(ata.data_assembleia);
-        fflush(stdin);
-        printf("\nLocal da assembleia: ");
-        gets(ata.local_assembleia);
+    printf("\n\nDia da assembleia: ");
+    gets(ata.dia_assembleia);
+    printf("\n\nMês da assembleia: ");
+    gets(ata.mes_assembleia);
+    printf("\n\nAno da assembleia: ");
+    gets(ata.ano_assembleia);
+    fflush(stdin);
+    printf("\nLocal da assembleia: ");
+    gets(ata.local_assembleia);
 
-        printf("\n\nDia da assembleia: ");
-        gets(ata.dia_assembleia);
-        printf("\n\nMês da assembleia: ");
-        gets(ata.mes_assembleia);
-        printf("\n\nAno da assembleia: ");
-        gets(ata.ano_assembleia);
-        fflush(stdin);
-        printf("\nLocal da assembleia: ");
-        gets(ata.local_assembleia);
+    //abrir ficheiro e ver se está a funcionar
+    FILE *fl;
 
+    fl=fopen("ataDaAssembleia.txt", "a+");
 
-        FILE *fl;
-
-
-        fl=fopen("ataDaAssembleia.txt", "a+");
-
-        if(fl==NULL) {
-            printf("\nERRO AO ABRIR ATA");
-        }
-        else {
-            fprintf(fl, "%i;%i;%i;%s", *ata.dia_assembleia, *ata.mes_assembleia, *ata.ano_assembleia, ata.local_assembleia);
-        }
-        fclose(fl);
+    if(fl==NULL) {
+        printf("\nERRO AO ABRIR ATA");
+    }
+    else {
+        fprintf(fl, "%i;%i;%i;%s", *ata.dia_assembleia, *ata.mes_assembleia, *ata.ano_assembleia, ata.local_assembleia);
+    }
+    fclose(fl);
     }
 
-    // cria a instancia do ficheiro %i.txt
+// cria a instancia do ficheiro %i.txt, sendo %i o numero da ata
 FILE *escreverAta1() {
 
+    char texto[100];
+    ATA ata;
+    FILE *fl;
 
-        char texto[100];
-        ATA ata;
-        FILE *fl;
+    fl=fopen("%i.txt", numero, "a");
 
-        fl=fopen("%i.txt", numero, "a");
-
-        if(fl==NULL) {
-            printf("\nERRO AO ABRIR ATA");
-        }
-        printf("\n\nIntroduza o texto da ata: ");
-        scanf("%s", &ata.texto);
-
-        fprintf(fl, "%s", ata.texto);
-        fflush(stdin);
-        fclose(fl);
+    if(fl==NULL) {
+        printf("\nERRO AO ABRIR ATA");
     }
+    printf("\n\nIntroduza o texto da ata: ");
+    scanf("%s", &ata.texto);
+
+    fprintf(fl, "%s", ata.texto);
+    fflush(stdin);
+    fclose(fl);
+}
+
 /*
 void imprimeLista(ELEM *iniLista)
 {
@@ -96,52 +89,52 @@ void imprimeLista(ELEM *iniLista)
 }
 */
 
-    void mostrarLista(ELEM *iniLista)
-    {
-        ELEM * aux = NULL;
+// imprimir a lista
+void mostrarLista(ELEM *iniLista){
+    ELEM * aux = NULL;
 
-        if(iniLista=NULL) {
-            printf("Lista vazia\n");
-            return;
-        }
-        else {
-            while (iniLista!=NULL) {
-                printf("Data: %s//Local: %s", aux->info.data
-                        , aux->info.local);
-                iniLista=iniLista->seguinte;
-            }
-        }
+    if(iniLista=NULL) {
+        printf("Lista vazia\n");
         return;
     }
-    int inserirInicio(ELEM **iniLista, ATA info) {
-
-        ELEM*novo=NULL;
-
-        novo=(ELEM*)calloc(1, sizeof(ELEM));
-
-        if(novo==NULL) {printf("OUT OF MEMORY \n"); return -1;
+    else {
+        while (iniLista!=NULL) {
+            printf("Data: %s//Local: %s", aux->info.data, aux->info.local);
+                iniLista=iniLista->seguinte;
         }
+    }
+return;
+}
 
-        novo->info=info;
-        novo->seguinte=NULL;
+//
+int inserirInicio(ELEM **iniLista, ATA info) {
 
-        if(*iniLista==NULL) {
+    ELEM*novo=NULL;
 
-            *iniLista=novo;
-        }
-        else {
-            novo->seguinte=*iniLista;
-            (*iniLista)=novo;
-        }
-        return 0;
+    novo=(ELEM*)calloc(1, sizeof(ELEM));
+
+    if(novo==NULL) {printf("OUT OF MEMORY \n"); return -1;
     }
 
-    int main(int argc, const char *argv[]){
+    novo->info=info;
+    novo->seguinte=NULL;
 
-        ATA*iniLista = NULL;
-        iniLista=localAta1();
+    if(*iniLista==NULL) {
+        *iniLista=novo;
+    }
+    else {
+        novo->seguinte=*iniLista;
+        (*iniLista)=novo;
+    }
+return 0;
+}
+
+
+int main(int argc, const char *argv[]){
+
+    ATA*iniLista = NULL;
+    iniLista=localAta1();
     mostrarLista(iniLista);
 
     return 0;
 }
-
