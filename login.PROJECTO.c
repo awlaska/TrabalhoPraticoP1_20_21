@@ -1,3 +1,10 @@
+/*
+ struct do utilizador
+ struct elem
+
+ */
+
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
