@@ -7,7 +7,7 @@
 #define MAX 1000
 
 
-// struct do utiizador
+// struct do utilizador
 typedef struct utilizador{
 	char nome[100];
 	char senha[100];
@@ -24,7 +24,7 @@ typedef struct elem{
 } ELEM;
 
 
-
+// cria a instancia do ficheiro utilizadores
 FILE utilizadores() {
 	
 	int menu_entrada;
@@ -39,7 +39,7 @@ FILE utilizadores() {
 			
 	printf(" 1 - entrar \n 2- registar");
 	printf("\nQual tipo: ");
-	scanf("%i", &op);
+	scanf_s("%i", &op);
 	fflush(stdin);
 	menu_entrada:
 
@@ -49,11 +49,11 @@ FILE utilizadores() {
 			int login_sucesso;
 			
 			printf("\nNome de utilizador: ");
-			gets(aceder.username);
+			scanf_s("%s", aceder.username);
 			printf("\nSenha: ");
-			gets(aceder.senha);
+			scanf_s("%s", aceder.senha);
 			
-			fp=fopen("adms_users.txt", "r");
+			fp=fopen_s("adms_users.txt", "a+");
 				
 			if(fp==NULL) {
 				printf("ERRO AO ABRIR FICHEIRO");
@@ -96,23 +96,23 @@ FILE utilizadores() {
 			
 			printf("\n\n");
 				printf("Introduza o nome: ");
-				gets(aceder.nome);
+				scanf_s("%s", aceder.nome);
 				printf("\n\t D - administrador  \t C - acionista");
 				printf("\nTipo: ");
-				gets(aceder.tipo);
+				scanf_s("%s", aceder.tipo);
 				
 				while(strcmp(aceder.tipo, "D") && strcmp(aceder.tipo, "C")) {
-					printf("\nIntroduziu car�cter inv�lido\n");
+					printf("\nIntroduziu caracter invalido\n");
 					printf("\nIntroduza entre estes tipos de utilizador: D - administrador  \t C - acionista\n");
-					printf("\nTipo: ", aceder.tipo);
+					printf("\nTipo: %s", aceder.tipo);
 				}
 				fflush(stdin);
 				printf("\nIntroduza o ID: ");
-				gets(aceder.utilizador);
+				scanf_s("%s", aceder.utilizador);
 				printf("\nIntroduza a senha: ");
-				gets(aceder.senha);
+                scanf_s("%s", aceder.senha);
 				
-				fp=fopen("adms_users.txt", "a");
+				fp=fopen_s("adms_users.txt", "a");
 				
 				fread(&num_utilizadores, sizeof(int), 1, fp);
 				
@@ -129,12 +129,12 @@ FILE utilizadores() {
 					printf("Nome de utilizador j� existente-> Escolha outro!!!");
 				}//  
 				else{
-					fp = fopen("adms_users->txt","r");
+					fp = fopen_s("adms_users->txt","r");
 					num_utilizadores++;
 					fwrite(&num_utilizadores,sizeof(int),1,fp);
 					fclose(fp);
 					
-					fp = fopen("adms_users.txt","a");
+					fp = fopen_s("adms_users.txt","a");
 					fwrite(&aceder,sizeof(LOGIN),1,fp);
 					fclose(fp);
 				}

@@ -26,12 +26,12 @@ The C compiler identification is MSVC, found in "C:/Users/Alaska/Documents/GitHu
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/Alaska/Documents/GitHub/TrabalhoPraticoP1/untitled1/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):nmake /nologo cmTC_48b70\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.28.29910\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_48b70.dir\build.make /nologo -L                  CMakeFiles\cmTC_48b70.dir\build
-Building C object CMakeFiles/cmTC_48b70.dir/CMakeCCompilerABI.c.obj
-	C:\PROGRA~2\MICROS~4\2019\BUILDT~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @C:\Users\Alaska\AppData\Local\Temp\nm778A.tmp
+Run Build Command(s):nmake /nologo cmTC_46af6\fast && 	"C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.28.29910\bin\HostX86\x86\nmake.exe"  -f CMakeFiles\cmTC_46af6.dir\build.make /nologo -L                  CMakeFiles\cmTC_46af6.dir\build
+Building C object CMakeFiles/cmTC_46af6.dir/CMakeCCompilerABI.c.obj
+	C:\PROGRA~2\MICROS~4\2019\BUILDT~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\cl.exe @C:\Users\Alaska\AppData\Local\Temp\nm3553.tmp
 CMakeCCompilerABI.c
-Linking C executable cmTC_48b70.exe
-	"C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_48b70.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\mt.exe --manifests -- C:\PROGRA~2\MICROS~4\2019\BUILDT~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_48b70.dir\objects1.rsp @C:\Users\Alaska\AppData\Local\Temp\nm7921.tmp
+Linking C executable cmTC_46af6.exe
+	"C:\Program Files\JetBrains\CLion 2021.1.1\bin\cmake\win\bin\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\cmTC_46af6.dir --rc=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\rc.exe --mt=C:\PROGRA~2\WI3CF2~1\10\bin\100190~1.0\x86\mt.exe --manifests -- C:\PROGRA~2\MICROS~4\2019\BUILDT~1\VC\Tools\MSVC\1428~1.299\bin\Hostx86\x86\link.exe /nologo @CMakeFiles\cmTC_46af6.dir\objects1.rsp @C:\Users\Alaska\AppData\Local\Temp\nm36EA.tmp
 
 
 
