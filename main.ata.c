@@ -70,24 +70,6 @@ FILE *escreverAta1() {
     fprintf(fl, "%s", ata.texto);
     fflush(stdin);
     fclose(fl);
-}
-
-/*
-void imprimeLista(ELEM *iniLista)
-{
-    ELEM *aux = NULL;
-    if (iniLista == NULL)
-    {
-        printf("Lista Vazia!\n");
-        return;
-    }
-    for (aux = iniLista; aux != NULL; aux = aux->seguinte)
-    {
-        printf("Data: %s\n Local: %s\n", aux->info.data
-                                        , aux->info.local);
-    }
-}
-*/
 
 // imprimir a lista
     ELEM * aux = NULL;
@@ -105,7 +87,7 @@ void imprimeLista(ELEM *iniLista)
 return;
 }
 
-//
+// FUNÇÃO PARA INSERIR DADOS NO INÍCIO DA LISTA
 int inserirInicio(ELEM **iniLista, ATA info) {
 
     ELEM*novo=NULL;

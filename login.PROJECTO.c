@@ -1,15 +1,9 @@
-/*
- struct do utilizador
- struct elem
-
- */
-
 
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 #include<locale.h>
-#include <login.h>
+#include<login.h>
 
 #define MAX 1000
 
