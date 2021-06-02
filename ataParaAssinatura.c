@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+/*
 // struct ata
 typedef struct {
 	char local[100];
@@ -89,4 +89,4 @@ int main(int argc, const char *argv[]){
 	escreverAta1();
 	
 	return 0;
-}
+}*/
