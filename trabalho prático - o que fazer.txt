@@ -12,11 +12,15 @@ ata:
 	lista acionistas presentes (ordem de chegada);
 	estado (em redação, para assinatura, concluída).
 
-sistema:
+o programa (sistema):
 	inserir dados;
 	apagar dados;
 	pesquisar (CRUD) dados.
-tudo por administradores;
+condições nas atas
+uma ata no estado "para assinatura" ou "concluída" não pode ser alterada nem apagada.
+uma ata no estado "para assinatura" só pode ser assinada pelos utilizadores do tipo "acionista" presentes na assembleia, ordem inversa da ordem de chegada, quando todos os "acionistas" tiverem assinado, a ata fica no estado "concluída"
+
+os administradores podem:
 	listar atas por estado;
 	listar as assinatura em falta de uma determinada ata;
 	listar todas as atas de assembleias que tenham ocorrido depois de uma determinada data;
@@ -25,8 +29,22 @@ tudo por administradores;
 	escrever num ficheiro de texto a ata com todos os seus dados, incluindo espaço para as assinaturas dos acionistas presentes;
 	gerar a listagem de atas ordenadas por quantidade de assinaturas em falta.
 
-uma ata no estado "para assinatura" ou "concluída" não pode ser alterada nem apagada.
-uma ata no estado "para assinatura" só pode ser assinada pelos utilizadores do tipo "acionista" presentes na assembleia, ordem inversa da ordem de chegada, quando todos os "acionistas" tiverem assinado, a ata fica no estado "concluída"
+
 
 para assinar, utilizador faz login e depois vê as atas que precisa de assinar
 aplicacao deve guardar o estado de execução
+
+- criar ficheiros em csv 
+
+Para facilitar o registo das atas das assembleias previstas para um determinado ano, a aplicação
+permite a parametrização por via de um ficheiro de texto, que pode ser indicado na linha de
+comando. O ficheiro de texto tem o formato CSV, organizado com “data” e “local da
+assembleia”. Por exemplo:
+2021/05/01;Viana do Castelo
+2021/08/15;Braga
+2021/12/03;Porto
+A existir, esse ficheiro de parametrização de assembleias é indicado na linha de comando da
+aplicação.
+A aplicação deve ainda garantir que o seu estado de execução é guardado em ficheiro para que
+mais tarde possa ser restaurado, garantindo assim continuidade de funcionamento entre
+utilizações.
