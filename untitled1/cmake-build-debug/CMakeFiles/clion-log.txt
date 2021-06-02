@@ -1,1 +1,1 @@
-CMakeLists.txt not found in C:\Users\cicero\Documents\GitHub\TrabalhoPraticoP1\untitled1 Select CMakeLists.txt
+CMakeLists.txt not found in C:\Users\Alaska\Documents\GitHub\TrabalhoPraticoP1\untitled1 Select CMakeLists.txt

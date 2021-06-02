@@ -4,7 +4,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include <string.h>
-
+/*
 // struct da ata
 typedef struct ata {
     int numero;
@@ -119,3 +119,4 @@ int main(int argc, const char *argv[]){
 
     return 0;
 }
+*/
